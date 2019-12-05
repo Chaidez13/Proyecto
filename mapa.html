@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Mapa</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h2>ReportaMesta</h2>
+        </div>
+        <div class="opciones">
+            <ul>
+                <li><a href="">Cuenta</a> </li>
+                <li><a href="">Mis Reportes</a> </li>
+                <li><a href="">Algo más</a> </li>
+            </ul>
+        </div>
+    </header>
+    <div class="map" id="map">
+
+    </div>
+    <script>
+        var map
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 24.142582, lng: -110.312658},
+                zoom: 15
+            })
+        } 	
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_a1sSLqq6Wcq3hrBMAGeBybVq9CrJrDU&callback=initMap">
+    </script>
+</body>
+</html>
